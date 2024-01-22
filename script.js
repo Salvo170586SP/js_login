@@ -31,6 +31,7 @@ btn.addEventListener('click', () => {
     const ok = document.getElementById('ok');
     const negato = document.getElementById('negato');
     const error = document.getElementById('error');
+    const message = document.getElementById('message');
 
     //RITORNO UN BOOLEANO SE I CAMPI SONO CORRETTI
     const autorizzato = credentials.filter(user => {
@@ -57,6 +58,7 @@ btn.addEventListener('click', () => {
         /* LOGICA MESSAGGIO AUTORIZZATO/NON AUTORIZZATO */
         if (autorizzato) {
             form.classList.add('d-none');
+            message.classList.add('d-none');
             negato.innerText = '';
 
             //mostro il nome a schermo dell'utente loggato
@@ -65,6 +67,7 @@ btn.addEventListener('click', () => {
             }
         } else {
             form.classList.add('d-none');
+            message.classList.add('d-none');
             negato.innerText = 'Accesso negato!';
             ok.innerText = '';
 
