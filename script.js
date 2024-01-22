@@ -19,7 +19,7 @@ const credentials = [
 
 ];
 
-/* console.table(credentials); */
+console.table(credentials);
 
 const btn = document.getElementById('btn');
 
